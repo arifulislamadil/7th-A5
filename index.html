@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Geometry Genius</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header section  -->
+      <header>
+        <nav>
+          <div
+            class="d-flex justify-content-between align-items-center bg-primary-subtle pe-3 ps-3 mt-3 pt-2 pb-2"
+          >
+            <div>
+              <h4>Interactive</h4>
+              <p>Geometry Genius</p>
+            </div>
+            <div>
+              <button class="btn btn-primary">blog</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- cart section  -->
+        <section class="mb-5">
+          <div>
+            <!-- Triangle section  -->
+            <div class="row row-cols-1 row-cols-md-4 g-4 mt-3">
+              <div class="col">
+                <div class="card">
+                  <img src="/images/triangle.png" class="card-img-top p-2" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Triangle</h5>
+                    <p class="card-text ">
+                      <p>Area (A) = 0.5 x b x h</p>
+                    </p>
+                    <div class="mt-2 mb-2 d-flex">
+                        <input id="base" class="w-50" type="text" placeholder=" b"/>
+                        <h6 class="mt-2 me-1 ms-1">cm</h6>
+                        <input id="height" class="w-50" type="text" placeholder=" h"/>
+                        <h6 class="mt-2 me-1 ms-1">cm</h6>
+                      </div>
+                    <button onclick="triangle()" class="btn btn-primary w-100">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Rectangle section  -->
+              <div class="col">
+                <div class="card">
+                  <img src="/images/rectangle.png" class="card-img-top p-2 mt-4 mb-4" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Rectangle</h5>
+                    <p class="card-text ">
+                      <p>Area (A) = w x I</p>
+                    </p>
+                    <div class="mt-2 mb-2 d-flex">
+                        <input id="rec-width" class="w-50" type="text" placeholder=" w"/>
+                        <h6 class="mt-2 me-1 ms-1">cm</h6>
+                        <input id="rec-height" class="w-50" type="text" placeholder=" l"/>
+                        <h6 class="mt-2 me-1 ms-1">cm</h6>
+                      </div>
+                    <button onclick="rectangle()" class="btn btn-primary w-100">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Parallelogram section  -->
+              <div class="col">
+                <div class="card">
+                  <img src="/images/parallelogram.png" class="card-img-top p-2 mt-5 mb-4" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Parallelogram</h5>
+                    
+                    <div class="mt-2 mb-2">
+                        <p>Area (A) = b x h</p>
+                        <p>b=<span id="par-base">10</span>cm, h=<span id="par-height">12</span>cm</p>
+                      </div>
+                    <button onclick="parallelogram()" class="btn btn-primary w-100 mt-2">Calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Calculate Area  -->
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Area Calculation</h5>
+                    <hr/>
+                    <p class="card-text" id="triangle">
+                    </p>
+                    <p class="card-text" id="rectangle">
+                    </p>
+                    <p class="card-text" id="parallelogram">
+                    </p>
+                    <p class="card-text" id="rhombus">
+                    </p>
+                    <p class="card-text" id="pentagon">
+                    </p>
+                    <p class="card-text" id="ellipse">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Rhombus Section  -->
+              <div class="col">
+                <div class="card">
+                  <img src="/images/rhombus.png" class="card-img-top p-2 img-fluid mx-auto d-block mt-2 mb-2" style="width: 200px;" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Rhombus</h5>
+                    
+                    <div class="mt-2 mb-2">
+                        <p>Area (A) = 0.5 x d <sub>1</sub> x d <sub>2</sub> </p>
+                        <p>d<sub>1</sub> = <span id="rhom-d1">16</span>cm, d<sub>2</sub> = <span id="rhom-d2">8</span>cm</p>
+                      </div>
+                    <button onclick="rhombus()" class="btn btn-primary w-100 mt-2">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pentagon Section  -->
+              <div class="col">
+                <div class="card text-center">
+                  <img src="/images/pentagon.png" class="card-img-top img-fluid mx-auto d-block" style="width: 180px;" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Pentagon</h5>
+                    <div class="">
+                        <p>Area (A) =0.5 x p x b</p>
+                        <p>p=<span id="pen-p">6</span>cm, b=<span id="pen-b">10</span>cm</p>
+                      </div>
+                    <button onclick="pentagon()" class="btn btn-primary w-100 ">Calculate</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ellipse Section  -->
+              <div class="col">
+                <div class="card text-center">
+                  <img src="/images/ellipse.png" class="card-img-top img-fluid mx-auto d-block mt-4 mb-4" style="width: 200px;" alt="..." />
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Ellipse</h5>
+                    <div class="">
+                        <p>Area (A) =&#960ab</p>
+                        <p>a=<span id="elli-a">10</span>cm, b=<span id="elli-b">4</span>cm</p>
+                      </div>
+                    <button onclick="ellipse()" class="btn btn-primary w-100 ">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+
+    <!-- Js link  -->
+    <script src="js/app.js"></script>
+    <!-- bootstrap js links  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
