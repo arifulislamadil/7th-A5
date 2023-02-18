@@ -30,8 +30,8 @@ function triangleRectangle(number, title, base, height) {
   const heightValue = inputHeight.value;
   const totalArea = number * parseInt(baseValue) * parseInt(heightValue);
 
-  if (inputBase.value < 0 || inputHeight.value < 0 || inputBase.value.length == 0 || inputHeight.value.length == 0 ) {
-    alert("Please input a positive number and that not be less then zero");
+  if (inputBase.value < 1 || inputHeight.value < 1 || inputBase.value.length == 0 || inputHeight.value.length == 0 ) {
+    alert("Please input a valid number");
   }
    else {
     serial += 1;
