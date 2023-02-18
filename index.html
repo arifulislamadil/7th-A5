@@ -29,7 +29,9 @@
               <p>Geometry Genius</p>
             </div>
             <div>
-              <button class="btn btn-primary">blog</button>
+              <button class="btn btn-primary">
+                <a class="text-light text-decoration-none" href="blog.html">Blog</a>
+              </button>
             </div>
           </div>
         </nav>
@@ -50,12 +52,12 @@
                       <p>Area (A) = 0.5 x b x h</p>
                     </p>
                     <div class="mt-2 mb-2 d-flex">
-                        <input id="tri-base" class="w-50" type="text" placeholder=" b"/>
+                        <input id="tri-base" class="w-50" type="number" placeholder=" b"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
-                        <input id="tri-height" class="w-50" type="text" placeholder=" h"/>
+                        <input id="tri-height" class="w-50" type="number" placeholder=" h"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
                       </div>
-                    <button id="triangle" class="btn btn-primary w-100">Calculate</button>
+                    <button id="triangle" class="btn btn-primary w-100 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -69,12 +71,12 @@
                       <p>Area (A) = w x I</p>
                     </p>
                     <div class="mt-2 mb-2 d-flex">
-                        <input id="rec-width" class="w-50" type="text" placeholder=" w"/>
+                        <input id="rec-width" class="w-50" type="number" placeholder=" w"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
-                        <input id="rec-height" class="w-50" type="text" placeholder=" l"/>
+                        <input id="rec-height" class="w-50" type="number" placeholder=" l"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
                       </div>
-                    <button id="rectangle" class="btn btn-primary w-100">Calculate</button>
+                    <button id="rectangle" class="btn btn-primary w-100 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -90,7 +92,7 @@
                         <p>Area (A) = b x h</p>
                         <p>b=<span id="par-base">10</span>cm, h=<span id="par-height">12</span>cm</p>
                       </div>
-                    <button id="parallelogram" class="btn btn-primary w-100 mt-2">Calculate</button>
+                    <button id="parallelogram" class="btn btn-primary w-100 mt-2 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -105,7 +107,7 @@
                         <p>Area (A) = 0.5 x d <sub>1</sub> x d <sub>2</sub> </p>
                         <p>d<sub>1</sub> = <span id="rhom-d1">16</span>cm, d<sub>2</sub> = <span id="rhom-d2">8</span>cm</p>
                       </div>
-                    <button id="rhombus" class="btn btn-primary w-100 mt-2">Calculate</button>
+                    <button id="rhombus" class="btn btn-primary w-100 mt-2 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -120,7 +122,7 @@
                         <p>Area (A) =0.5 x p x b</p>
                         <p>p=<span id="pen-p">6</span>cm, b=<span id="pen-b">10</span>cm</p>
                       </div>
-                    <button id="pentagon" class="btn btn-primary w-100 ">Calculate</button>
+                    <button id="pentagon" class="btn btn-primary w-100 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -135,7 +137,7 @@
                         <p>Area (A) =&#960ab</p>
                         <p>a=<span id="elli-a">10</span>cm, b=<span id="elli-b">4</span>cm</p>
                       </div>
-                    <button id="ellipse" class="btn btn-primary w-100 ">Calculate</button>
+                    <button id="ellipse" class="btn btn-primary w-100 fw-bold">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -146,7 +148,7 @@
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <h3>Area Calculation</h3>
+                  <h3 class="border-bottom text-center">Area Calculation</h3>
                   <table class="table">
                     <tbody id="table-container">
                       <!-- <tr>
