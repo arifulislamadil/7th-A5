@@ -1,4 +1,20 @@
 let serial = 0;
+
+//Random Color Generate
+function randomColor(random){
+    document.getElementById(random).addEventListener("mouseenter", function(){
+        let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        this.style.backgroundColor=randomColor;
+    })
+}
+    randomColor("random-color-one")
+    randomColor("random-color-two");
+    randomColor("random-color-three");
+    randomColor("random-color-four");
+    randomColor("random-color-five");
+    randomColor("random-color-six");
+
+    
 // common function for triangle and rectangle
 function triangleRectangle(number, title, base, height) {
  
@@ -11,7 +27,7 @@ function triangleRectangle(number, title, base, height) {
   const totalArea = number * parseInt(baseValue) * parseInt(heightValue);
 
   if (inputBase.value < 0 || inputHeight.value < 0 || inputBase.value.length == 0 || inputHeight.value.length == 0 ) {
-    alert("Please input a positive number and less then 0");
+    alert("Please input a positive number and not less then zero");
   }
    else {
     serial += 1;
