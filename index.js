@@ -1,19 +1,21 @@
+let serial = 0;
 // common function for triangle and rectangle
 function triangleRectangle(title,base,height){
+    serial += 1;
     // get data from html using id 
     const nameText = document.getElementById(title).innerText;
     const inputBase = document.getElementById(base);
     const baseValue = inputBase.value;
     const inputHeight = document.getElementById(height);
     const heightValue = inputHeight.value;
-    const totalArea = baseValue * heightValue;
+    const totalArea = parseInt(baseValue)  * parseInt(heightValue);
 
     // get parent container 
     const container = document.getElementById("table-container");
     // add to cart
     const tr=document.createElement("tr");
     tr.innerHTML = `
-    <td>${1}</td>
+    <td>${serial}</td>
     <td>${nameText}</td>
     <td>${totalArea} cm <sup>2</sup></td>
     <button id="btn-cal">Convert to m <sup>2</sup></button>
@@ -39,6 +41,7 @@ document.getElementById("rectangle").addEventListener("click",function(){
 
 // common function for parallelogram, Rhombus ,Pentagon, Ellipse 
 function commonFunc(number,title,base,height){
+    serial+=1;
     const nameText=document.getElementById(title).innerText;
     const parBase = document.getElementById(base).innerText;
     const parHeight = document.getElementById(height).innerText;
@@ -50,7 +53,7 @@ function commonFunc(number,title,base,height){
     // add to cart
     const tr=document.createElement("tr");
     tr.innerHTML = `
-    <td>${1}</td>
+    <td>${serial}</td>
     <td>${nameText}</td>
     <td>${area.toFixed(2)} cm <sup>2</sup></td>
     <button id="btn-cal">Convert to m <sup>2</sup></button>
