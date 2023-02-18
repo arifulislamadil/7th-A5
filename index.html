@@ -45,17 +45,17 @@
                 <div class="card">
                   <img src="/images/triangle.png" class="card-img-top p-2" alt="..." />
                   <div class="card-body text-center">
-                    <h5 class="card-title">Triangle</h5>
+                    <h5 class="card-title" id="triangle-name">Triangle</h5>
                     <p class="card-text ">
                       <p>Area (A) = 0.5 x b x h</p>
                     </p>
                     <div class="mt-2 mb-2 d-flex">
-                        <input id="base" class="w-50" type="text" placeholder=" b"/>
+                        <input id="tri-base" class="w-50" type="text" placeholder=" b"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
-                        <input id="height" class="w-50" type="text" placeholder=" h"/>
+                        <input id="tri-height" class="w-50" type="text" placeholder=" h"/>
                         <h6 class="mt-2 me-1 ms-1">cm</h6>
                       </div>
-                    <button onclick="triangle()" class="btn btn-primary w-100">Calculate</button>
+                    <button id="triangle" class="btn btn-primary w-100">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -98,20 +98,17 @@
               <div class="col">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">Area Calculation</h5>
-                    <hr/>
-                    <p class="card-text" id="triangle">
-                    </p>
-                    <p class="card-text" id="rectangle">
-                    </p>
-                    <p class="card-text" id="parallelogram">
-                    </p>
-                    <p class="card-text" id="rhombus">
-                    </p>
-                    <p class="card-text" id="pentagon">
-                    </p>
-                    <p class="card-text" id="ellipse">
-                    </p>
+                    <h3>Area Calculation</h3>
+                    <table class="table">
+                      <tbody id="table-container">
+                        <!-- <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                        </tr> -->
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -168,7 +165,7 @@
 
 
     <!-- Js link  -->
-    <script src="js/app.js"></script>
+    <script src="index.js"></script>
     <!-- bootstrap js links  -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
