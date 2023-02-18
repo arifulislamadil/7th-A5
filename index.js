@@ -1,11 +1,15 @@
+//Create Serial Number
 let serial = 0;
 
 //Random Color Generate
 function randomColor(random){
     document.getElementById(random).addEventListener("mouseenter", function(){
         let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        let randomColorBorder = '#'+Math.floor(Math.random()*16777215).toString(16);
         this.style.backgroundColor=randomColor;
+        this.style.border=`3px solid ${randomColorBorder}`;
     })
+    
 }
     randomColor("random-color-one")
     randomColor("random-color-two");
@@ -65,7 +69,7 @@ function commonFunc(number, title, base, height) {
   const parBase = document.getElementById(base).innerText;
   const parHeight = document.getElementById(height).innerText;
   const area = number * parBase * parHeight;
-  console.log(1 * parBase * parHeight);
+  console.log(1 * parseInt(parBase)  * parseInt(parHeight) );
 
   // get parent container
   const container = document.getElementById("table-container");
