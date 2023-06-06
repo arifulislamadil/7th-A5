@@ -1,0 +1,12 @@
+#btn-cal{
+    background-color: rgb(53, 53, 241);
+    border: none;
+    color:white;
+    margin-bottom: 2px;
+    font-size: 14px;
+
+}
+
+#cal-area{
+    margin-top: 40px !important;
+}
